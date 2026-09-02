@@ -11,7 +11,7 @@ A living, one-row-per-project snapshot — the durable answer to "what's shipped
 | **nh-skills** | 🟢 Stable | Phase 1+2 complete. One real skill (`nh-commit`) merged via PR #1 through the full author → validate → PR → CI → merge loop. `npm run validate` and `npm test` both green. | None active. Next skill addition is the real test of repeatability. | `../nh-skills/status.md` |
 | **nh-deck** | 🟢 Stable | Phase 3+4 complete. `render` genuinely serves HTML over a real local server; `pdf` genuinely produced a real PDF via a detected local Chrome. `npm run build` and `npm test` both green, CI green. | No 3-OS CI matrix yet (single ubuntu-latest job by design). No `npm publish` wired up. | `../nh-deck/status.md` |
 | **daily-dose** | 🟡 Active, blocked on keys | Phase 5+6 complete. Real live HN Algolia fetch, placeholder (non-LLM) scoring, `astro build` renders real content. `npm run build` and `npm test` both green, CI green. | **No LLM API keys exist** — real curation cannot start until keys are provided. No cron, no Vercel deployment (both require explicit user go-ahead). | `../daily-dose/status.md` |
-| **Not-Humans-Lab (this repo)** | 🟡 Docs-only, unregistered | Phase 0 + Phase 7 complete. All cross-cutting docs in place, `agent_learning.md` holds 2 real cross-cutting learnings, `Branches.md`/`LICENSE` reconciled against all three sub-projects. | **Not yet a git repository** — `git init`/`gh repo create` here requires fresh explicit user confirmation per this repo's own `CLAUDE.md`, not yet requested. `not-humans-lab` GitHub org / `@not-humans-lab` npm scope unregistered. | (this file) |
+| **Not-Humans-Lab (this repo)** | 🟢 Live, docs-only | Phase 0 + Phase 7 complete. Live at github.com/sairam0424/not-humans-lab. All cross-cutting docs in place, `agent_learning.md` holds 2 real cross-cutting learnings, `Branches.md`/`LICENSE` reconciled against all three sub-projects. | No dedicated `not-humans-lab` GitHub **org** (this is a personal-account repo) / `@not-humans-lab` npm scope yet — not blocking, just not decided. | (this file) |
 
 ## Recent progress (this session)
 
@@ -21,13 +21,12 @@ A living, one-row-per-project snapshot — the durable answer to "what's shipped
 
 ## Upcoming milestones
 
-1. Decide whether to register this repo (Not-Humans-Lab) as a real GitHub repo.
-2. Provide real LLM API keys to unblock daily-dose's actual curation step.
-3. Decide on Vercel deployment and the `schedule:` cron for daily-dose.
-4. Grow nh-skills' catalog past one skill; revisit tooling only at ~30-40 skills or outside contributors.
-5. Consider `npm publish` for nh-deck and nh-skills once each has had more real-world use.
+1. Provide real LLM API keys to unblock daily-dose's actual curation step.
+2. Decide on Vercel deployment and the `schedule:` cron for daily-dose.
+3. Grow nh-skills' catalog past one skill; revisit tooling only at ~30-40 skills or outside contributors.
+4. Consider `npm publish` for nh-deck and nh-skills once each has had more real-world use.
+5. Consider a dedicated `not-humans-lab` GitHub org and `@not-humans-lab` npm scope now that all four repos are live under the personal account.
 
 ## Risks & blockers (cross-project)
 
 - No LLM API keys anywhere in the suite — the single biggest blocker on daily-dose's roadmap, and on nh-skills eventually shipping any skill-authoring assistance that itself needs a model call.
-- This repo's own unregistered status means the "umbrella" is currently a local documentation convention, not a discoverable, linkable GitHub presence.

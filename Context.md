@@ -17,7 +17,7 @@ The umbrella tying together three independent, now-shipped projects — daily-do
   - nh-skills → pure Markdown + YAML frontmatter, one Node validator script; one real skill (`nh-commit`) shipped through a full author → validate → PR → CI → merge loop
   - system (this repo) → no runtime, no build — documentation and governance only, as decided
 - **Documentation: complete at both levels.** System-level docs (this repo) plus each sub-project's own full pre-scaffold doc set, including `agent_learning.md`/`anti-patterns.md`/`status.md`/`Branches.md` files that were missing from the original Phase 0/1/3/5 passes and only caught during the Phase 7 audit (see `agent_learning.md` and `status.md`).
-- **Not yet done, by explicit design, not oversight:** no real LLM API calls (no keys exist), no `schedule:` cron, no Vercel/hosting deployment, no arXiv sourcing for daily-dose, no npm publish for nh-deck/nh-skills, and this repo itself is still not a registered GitHub repo.
+- **Not yet done, by explicit design, not oversight:** no real LLM API calls (no keys exist), no `schedule:` cron, no Vercel/hosting deployment, no arXiv sourcing for daily-dose, no npm publish for nh-deck/nh-skills, and no dedicated `not-humans-lab` GitHub org / npm scope (this repo itself is now live under the personal account, see below).
 
 ## Architecture at a glance
 
@@ -39,12 +39,12 @@ Three independent repos, no shared build graph. See `architecture.md` for the C4
 7. ~~Phase 6 — daily-dose walking skeleton~~ Done — real HN fetch + placeholder scoring + real `astro build`, CI green.
 8. ~~Phase 7 — cross-project reconciliation~~ Done — this pass. Found and fixed: missing `Branches.md` copies, missing `agent_learning.md`/`anti-patterns.md`/`status.md` files (a gap in the original per-phase scaffolding, not drift), a placeholder LICENSE copyright holder in this repo, and stale "(planned)"/"in progress" status language in nh-skills' own docs.
 
-**Next priorities (post-plan, not yet started):** register this repo itself as a real GitHub repo (see Open questions below); wire real LLM API keys into daily-dose's curation step; decide on Vercel deployment; consider the `not-humans-lab` GitHub org / `@not-humans-lab` npm scope registration now that all three sub-projects prove the suite is real.
+**Next priorities (post-plan, not yet started):** wire real LLM API keys into daily-dose's curation step; decide on Vercel deployment; consider the dedicated `not-humans-lab` GitHub org / `@not-humans-lab` npm scope registration now that all four repos in the suite are live and prove it's real.
 
 ## Open questions / known risks
 
-- **This repo (Not-Humans-Lab) is still not a git repository.** Its own `CLAUDE.md` explicitly requires fresh, explicit user confirmation before `git init`/`gh repo create` here — not yet requested as part of Phase 7's docs-only scope.
-- The dedicated `not-humans-lab` GitHub org and `@not-humans-lab` npm scope remain **unregistered** — a third party could claim them before we do.
+- **This repo is now live**: github.com/sairam0424/not-humans-lab (created with fresh, explicit user confirmation, per its own `CLAUDE.md`'s requirement). It is under the personal account, not yet a dedicated `not-humans-lab` GitHub org.
+- The dedicated `not-humans-lab` GitHub **org** (as opposed to this personal-account repo) and the `@not-humans-lab` npm scope remain **unregistered** — a third party could claim either before we do.
 - The "system" tech-stack research input came back as a placeholder/error during the original research pass; the resulting decision (no shared runtime) is directionally sound but thinner-evidenced than the three project-level stack decisions.
 - No real LLM API keys exist anywhere in the suite — daily-dose's curation is an honest placeholder, not a design limitation but a hard blocker on the roadmap's next real step.
 
