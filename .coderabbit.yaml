@@ -1,0 +1,27 @@
+language: en-US
+enable_free_tier: true
+
+reviews:
+  profile: chill
+  request_changes_workflow: false
+  auto_review:
+    enabled: true
+    ignore_usernames: ["dependabot[bot]"]
+    auto_incremental_review: true
+  path_filters:
+    - "!**/dist/**"
+    - "!**/build/**"
+    - "!**/node_modules/**"
+    - "!**/*.generated.*"
+  path_instructions:
+    - path: "**/*.md"
+      instructions: "Flag documentation claims that are not verifiable against the linked repos (this is a federation root for nh-skills/nh-deck/daily-dose)."
+  tools:
+    markdownlint:
+      enabled: true
+    gitleaks:
+      enabled: true
+
+knowledge_base:
+  learnings:
+    scope: local
